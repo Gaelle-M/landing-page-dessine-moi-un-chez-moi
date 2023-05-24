@@ -27,13 +27,32 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 22px;
+    position: relative;
+}
+@media screen and (max-width: 640px) {
+    main  {
+       display: flex;
+       flex-direction: column-reverse;
+        
+    }
 }
 
 /****** LEFT PART ********/
 main .left-part, .right-part {
     width: 40%;
-    margin: 80px 0;
+    margin: 80px 0 50px;
+}
+@media screen and (max-width: 640px) {
+    main  .left-part, .right-part {
+       width: 100%;
+       margin: 20px 50px;
+    }
+}
+@media screen and (max-width: 640px) {
+    main  .left-part {
+       width: 90%;
+       margin: 20px 50px;
+    }
 }
 
 main .left-part h1{
@@ -42,9 +61,38 @@ main .left-part h1{
     color: #D4B676;
     margin: 10px auto;
 }
+@media screen and (max-width: 1150px) {
+    main .left-part h1 {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 920px) {
+    main .left-part h1 {
+        font-size: 35px;
+    }
+}
+    
+
 main .left-part p {
     font-size: 18px;
     margin: 10px auto;
+    text-align: justify;
+}
+@media screen and (max-width: 1150px) {
+    main .left-part p {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 920px) {
+    main .left-part p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 760px) {
+    main .left-part p {
+        font-size: 12px;
+        
+    }
 }
 
 main .left-part button {
@@ -67,6 +115,14 @@ main .left-part a {
     font-weight: bolder;
     font-size: 14px;
 }
+
+@media screen and (max-width: 760px) {
+    main .left-part a {
+        font-size: 12px;
+        
+    }
+}
+
 
 /****** RIGHT PART ********/
 main .right-part {
@@ -96,17 +152,39 @@ footer {
     align-items: center;
     justify-content: space-between;
     color: #fff;
-    height: 40px;
+    height: 60px;
+    font-size: 14px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+@media screen and (max-width: 640px) {
+    footer {
+        position: relative;
+    }
+}
+@media screen and (max-width: 375px) {
+    footer {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 315px) {
+    footer {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 270px) {
+    footer {
+        font-size: 9px;
+    }
 }
 
 footer p {
     margin-left: 10px;
-    font-size: 12px;
 }
 
 footer a {
     text-decoration: none;
-    font-size: 12px;
     color: #fff;
     margin-right: 10px;
     transition: 1s;
